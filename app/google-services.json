@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "402289388699",
+    "firebase_url": "https://alcoolougasolina-3f49c-default-rtdb.firebaseio.com",
+    "project_id": "alcoolougasolina-3f49c",
+    "storage_bucket": "alcoolougasolina-3f49c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402289388699:android:857ab0d33f28772e396a3e",
+        "android_client_info": {
+          "package_name": "com.example.alcoolougasolina"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpLAykoF0cBm_ry-mtJhEWdKitzmgcdQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

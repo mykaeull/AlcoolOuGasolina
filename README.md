@@ -49,7 +49,7 @@ Aplicativo mobile para Android que ajuda os usuários a decidir qual combustíve
 ### 📥 2. Clonar o repositório
 
 ```sh
-git clone https://github.com/seu-repositorio/alcool-ou-gasolina.git
+git clone https://github.com/mykaeull/AlcoolOuGasolina.git
 cd alcool-ou-gasolina
 ```
 

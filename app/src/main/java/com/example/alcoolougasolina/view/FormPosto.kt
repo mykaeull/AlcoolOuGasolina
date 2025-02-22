@@ -9,10 +9,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.alcoolougasolina.R
 import com.google.firebase.database.FirebaseDatabase
 
 @Composable
@@ -57,7 +59,7 @@ fun FormPosto(navController: NavController, postosList: MutableList<Triple<Strin
             OutlinedTextField(
                 value = postoNome,
                 onValueChange = { postoNome = it },
-                label = { Text("Nome do Posto") },
+                label = { Text(stringResource(id = R.string.station_name)) },
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -66,7 +68,7 @@ fun FormPosto(navController: NavController, postosList: MutableList<Triple<Strin
             OutlinedTextField(
                 value = alcoolPrice,
                 onValueChange = { alcoolPrice = it },
-                label = { Text("Valor do Álcool (R$)") },
+                label = { Text(stringResource(id = R.string.alcohol_price)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -76,7 +78,7 @@ fun FormPosto(navController: NavController, postosList: MutableList<Triple<Strin
             OutlinedTextField(
                 value = gasolinaPrice,
                 onValueChange = { gasolinaPrice = it },
-                label = { Text("Valor da Gasolina (R$)") },
+                label = { Text(stringResource(id = R.string.gasoline_price)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -95,13 +97,13 @@ fun FormPosto(navController: NavController, postosList: MutableList<Triple<Strin
                 enabled = isButtonEnabled,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Adicionar Posto")
+                Text(stringResource(id = R.string.add_station))
             }
             Spacer(modifier = Modifier.height(8.dp))
 
             // Link para Ver Lista de Postos
             Text(
-                text = "Ver Lista de Postos",
+                text = stringResource(id = R.string.see_station_list),
                 color = MaterialTheme.colorScheme.primary,
                 textDecoration = TextDecoration.Underline,
                 modifier = Modifier.clickable { navController.navigate("listPosto") }

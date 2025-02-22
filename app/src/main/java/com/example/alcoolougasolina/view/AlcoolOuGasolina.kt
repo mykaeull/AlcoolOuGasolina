@@ -13,9 +13,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.alcoolougasolina.R
 
 @Composable
 fun FormScreen(navController: NavController) {
@@ -29,6 +31,10 @@ fun FormScreen(navController: NavController) {
     }
     var resultText by remember { mutableStateOf("") }
 
+    var alcoholBestOptionMessage = stringResource(id = R.string.alcohol_best_option_message)
+    var gasolineBestOptionMessage = stringResource(id = R.string.gasoline_best_option_message)
+    var calculateErrorMessage = stringResource(id = R.string.calculate_error_message)
+
     fun calcularMelhorCombustivel() {
         val alcool = alcoolPrice.toFloatOrNull()
         val gasolina = gasolinaPrice.toFloatOrNull()
@@ -36,12 +42,12 @@ fun FormScreen(navController: NavController) {
 
         if (alcool != null && gasolina != null && gasolina > 0) {
             resultText = if (alcool / gasolina <= fator) {
-                "Álcool é a melhor opção"
+                alcoholBestOptionMessage
             } else {
-                "Gasolina é a melhor opção"
+                gasolineBestOptionMessage
             }
         } else {
-            resultText = "Por favor, insira valores válidos."
+            resultText = calculateErrorMessage
         }
     }
 
@@ -65,7 +71,7 @@ fun FormScreen(navController: NavController) {
             OutlinedTextField(
                 value = alcoolPrice,
                 onValueChange = { alcoolPrice = it },
-                label = { Text("Preço do Álcool (R$)") },
+                label = { Text(stringResource(id = R.string.alcohol_price)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -75,7 +81,7 @@ fun FormScreen(navController: NavController) {
             OutlinedTextField(
                 value = gasolinaPrice,
                 onValueChange = { gasolinaPrice = it },
-                label = { Text("Preço da Gasolina (R$)") },
+                label = { Text(stringResource(id = R.string.gasoline_price)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -103,7 +109,7 @@ fun FormScreen(navController: NavController) {
                 onClick = { calcularMelhorCombustivel() },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Calcular")
+                Text(stringResource(id = R.string.calculate))
             }
             Spacer(modifier = Modifier.height(16.dp))
 

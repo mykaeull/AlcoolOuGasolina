@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AlcoolOuGasolina</string>
+    <string name="calculate">Calcular</string>
+    <string name="add_station">Adicionar Posto</string>
+    <string name="station_list">Lista de Postos</string>
+    <string name="delete">Excluir</string>
+    <string name="location">Localização</string>
+    <string name="alcohol_price">Preço do Álcool (R$)</string>
+    <string name="gasoline_price">Preço da Gasolina (R$)</string>
+    <string name="station_name">Nome do Posto</string>
+    <string name="station">Posto</string>
+    <string name="alcohol">Álcool: R$</string>
+    <string name="gasoline">Gasolina: R$</string>
+    <string name="calculate_error_message">Por favor, insira valores válidos.</string>
+    <string name="alcohol_best_option_message">Álcool é a melhor opção</string>
+    <string name="gasoline_best_option_message">Gasolina é a melhor opção</string>
+    <string name="see_station_list">Ver Lista de Postos</string>
 </resources>

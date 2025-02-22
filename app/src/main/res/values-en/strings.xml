@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Alcohol or Gasoline</string>
+    <string name="calculate">Calculate</string>
+    <string name="add_station">Add Station</string>
+    <string name="station_list">Station List</string>
+    <string name="delete">Delete</string>
+    <string name="location">Location</string>
+    <string name="alcohol_price">Alcohol Price ($)</string>
+    <string name="gasoline_price">Gasoline Price ($)</string>
+    <string name="station_name">Station Name</string>
+    <string name="station">Station</string>
+    <string name="alcohol">Alcohol: $</string>
+    <string name="gasoline">Gasoline: $</string>
+    <string name="calculate_error_message">Please enter valid values.</string>
+    <string name="alcohol_best_option_message">Alcohol is the best option</string>
+    <string name="gasoline_best_option_message">Gasoline is the best option</string>
+    <string name="see_station_list">See Station List</string>
+</resources>
